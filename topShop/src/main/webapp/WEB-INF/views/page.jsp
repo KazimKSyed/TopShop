@@ -21,8 +21,8 @@
 <meta name="author" content="">
 
 <title>Top Shop - ${title}</title>
-<script >
-	window.menu='${title}';
+<script>
+	window.menu = '${title}';
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -37,43 +37,49 @@
 </head>
 
 <body>
-<div class="wrapper">
-	<!-- Navigation -->
-	<%@ include file="./shared/navbar.jsp"%>
+	<div class="wrapper">
+		<!-- Navigation -->
+		<%@ include file="./shared/navbar.jsp"%>
 
-	<!-- Page Content -->
-	<div class="content">
-	<!-- Loading the home content -->
+		<!-- Page Content -->
+		<div class="content">
+			<!-- Loading the home content -->
 
-	<c:if test="${userClickHome == true }">
-		<%@ include file="home.jsp"%>
-	</c:if>
-	
-	<c:if test="${userClickAbout == true }">
-		<%@ include file="about.jsp"%>
-	</c:if>
-	<c:if test="${userClickContact == true }">
-		<%@ include file="contact.jsp"%>
-	</c:if>
-	
+			<c:if test="${userClickHome == true }">
+				<%@ include file="home.jsp"%>
+			</c:if>
+
+			<c:if test="${userClickAbout == true }">
+				<%@ include file="about.jsp"%>
+			</c:if>
+			<c:if test="${userClickContact == true }">
+				<%@ include file="contact.jsp"%>
+			</c:if>
+			<!-- Load only when user click all product  -->
+			<c:if
+				test="${userClickAllProducts == true or userClickCategoryProducts == true  }">
+				<%@ include file="listProducts.jsp"%>
+			</c:if>
+		</div>
+
+
+		<!-- Footer -->
+		<%@include file="./shared/footer.jsp"%>
+		<!-- /.container -->
+
+
+		<!-- uncaught referenceerror: $ is not defined FOR THAT -->
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
+
+		<script src="${js}/bootstrap.min.js"></script>
+		<script src="${js}/bootstrap.bundle.min.js"></script>
+		<script src="${js}/jquery.js"></script>
+
+		<!-- Self coded JavaScript -->
+		<script src="${js}/myapp.js"></script>
 	</div>
-	
-	
-	<!-- Footer -->
-	<%@include file="./shared/footer.jsp"%>
-	<!-- /.container -->
-
-
-<!-- uncaught referenceerror: $ is not defined FOR THAT -->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<!-- Bootstrap core JavaScript -->
-	
-	<script src="${js}/jquery.min.js"></script>
-<script src="${js}/bootstrap.bundle.min.js"></script>
-	
-	<!-- Self coded JavaScript -->
-	<script src="${js}/myapp.js"></script>
-</div>
 </body>
 
 </html>

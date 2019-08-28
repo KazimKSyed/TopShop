@@ -13,6 +13,12 @@
 		<spring.version>5.1.8.RELEASE</spring.version>
 	</properties>
 	<dependencies>
+		<!-- Linking backend project -->
+		<dependency>
+			<groupId>com.kazim</groupId>
+			<artifactId>shopBackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- Java EE API -->
 		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
 		<dependency>
@@ -27,9 +33,10 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
-			<!-- JSTL -->
 		</dependency>
-			<dependency>
+			
+			<!-- JSTL -->
+		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
