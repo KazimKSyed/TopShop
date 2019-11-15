@@ -1,4 +1,4 @@
-<h1 class="my-4">Top Shop</h1>
+<img style="margin-left:50px" src="${images}/topshoplogo.PNG" alt="Top Shop Logo"/>
 <div class="list-group">
 	<c:forEach items="${categories}" var="category">
 		<a href="${contextRoot}/show/category/${category.id}/products" class="list-group-item" id="a_${category.name }" >${category.name}</a>

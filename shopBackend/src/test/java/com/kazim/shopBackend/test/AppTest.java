@@ -1,4 +1,4 @@
-package com.kazim.shopBackend;
+package com.kazim.shopBackend.test;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
